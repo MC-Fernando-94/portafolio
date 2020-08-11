@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { InfoPaginaService } from '../../services/info-pagina.service';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  constructor( public infoService: InfoPaginaService, private sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
   }
 
+  // tslint:disable-next-line: typedef
+  getSantizeUrl(url: string): SafeUrl {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    }
 }
