@@ -54,7 +54,7 @@ export class ProductosService {
   }
    // tslint:disable-next-line: typedef
    private filtrarProductos( termino: string){
-     console.log(this.productos);
+
      this.productosFiltrado =  [];
 
      termino = termino.toLocaleLowerCase();

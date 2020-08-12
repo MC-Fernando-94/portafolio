@@ -30,7 +30,7 @@ export class InfoPaginaService {
       this.cargada = true;
       this.info = resp;
 
-      console.log(resp);
+
 
     });
   }
@@ -41,7 +41,7 @@ export class InfoPaginaService {
     // tslint:disable-next-line: deprecation
     .subscribe( (resp: any []) => {
       this.equipo = resp;
-      console.log(resp);
+
 
     });
 
